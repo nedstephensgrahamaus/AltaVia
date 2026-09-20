@@ -386,7 +386,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 20px 30px;font-size:14px;color:v
   var places = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{maxZoom:18});
   var satellite = L.layerGroup([imagery, places]);
   var topo = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',{maxZoom:17,attribution:'Map data &copy; OpenStreetMap contributors, SRTM | Style &copy; OpenTopoMap (CC-BY-SA)'});
-  var street = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png',{maxZoom:19,subdomains:'abcd',attribution:'&copy; OpenStreetMap contributors &copy; CARTO'});
+  var street = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:18,attribution:'Map &copy; Esri, HERE, Garmin, OpenStreetMap contributors'});
   satellite.addTo(map);
   L.control.layers({'Satellite':satellite,'Walking map':topo,'Street map':street},null,{collapsed:false,position:'topright'}).addTo(map);
   L.control.scale({imperial:false}).addTo(map);
